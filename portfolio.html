@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B. Rukshith Naidu | Professional Portfolio</title>
+  <style>
+    :root {
+      --primary: #0a192f;
+      --secondary: #112240;
+      --accent: #64ffda;
+      --text: #ccd6f6;
+      --light-text: #8892b0;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f9f9f9;
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      letter-spacing: 1px;
+    }
+    header p {
+      margin: 10px 0;
+      font-size: 1.1rem;
+      color: var(--accent);
+    }
+    .contact-info {
+      font-size: 0.9rem;
+      margin-top: 15px;
+    }
+    .contact-info a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    nav {
+      background: var(--secondary);
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      border-bottom: 2px solid var(--primary);
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 30px;
+      color: var(--primary);
+    }
+    .card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .tech-stack {
+      font-size: 0.85rem;
+      color: var(--primary);
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skill-tag {
+      background: var(--primary);
+      color: #fff;
+      padding: 6px 15px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .edu-item, .intern-item {
+      margin-bottom: 20px;
+    }
+    .date {
+      float: right;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+    }
+    @media (max-width: 600px) {
+      .date { float: none; display: block; margin-top: 5px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>B. Rukshith Naidu</h1>
+    <p>B.Tech in Information & Communication Technology</p>
+    <div class="contact-info">
+      Bellary, Karnataka | +91 7019339872 | 
+      <a href="mailto:brukshithnaidu@gmail.com">brukshithnaidu@gmail.com</a> |
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#summary">Summary</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+  </nav>
+
+  <section id="summary">
+    <h2>Professional Summary</h2>
+    <p>
+      Motivated Diploma in Computer Science graduate currently pursuing B.Tech in ICT at Marwadi University. 
+      Experienced in front-end development, backend integration, and database management through industrial internships. 
+      Proficient in building web applications using PHP, React, Node.js, and SQL, with a strong foundation in 
+      real-world software development lifecycles.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-container">
+      <span class="skill-tag">HTML5/CSS3</span>
+      <span class="skill-tag">JavaScript</span>
+      <span class="skill-tag">PHP</span>
+      <span class="skill-tag">React</span>
+      <span class="skill-tag">Node.js</span>
+      <span class="skill-tag">SQL</span>
+      <span class="skill-tag">XAMPP Server</span>
+      <span class="skill-tag">MySQL</span>
+      <span class="skill-tag">Git/GitHub</span>
+      <span class="skill-tag">Teamwork</span>
+      <span class="skill-tag">Problem Solving</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Key Projects</h2>
+    <div class="project-grid">
+      <div class="card">
+        <h3>Travel Management System</h3>
+        <p>A web application to streamline travel bookings and itineraries with interactive forms and user interfaces.</p>
+        <span class="tech-stack">React, Node.js, SQL, XAMPP</span>
+      </div>
+      <div class="card">
+        <h3>Online Voting System</h3>
+        <p>Secure digital voting platform featuring voter authentication and automated poll results storage.</p>
+        <span class="tech-stack">HTML, CSS, PHP, SQL, XAMPP</span>
+      </div>
+      <div class="card">
+        <h3>Library Management System</h3>
+        <p>Database-driven application implementing full CRUD operations to manage library inventory and records.</p>
+        <span class="tech-stack">HTML, CSS, PHP, SQL, XAMPP</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Internships</h2>
+    <div class="card">
+      <div class="intern-item">
+        <span class="date">Smart India (SI)</span>
+        <h3>Full Stack Intern</h3>
+        <p>Collaborated on the "Travel Management System" project, focusing on backend integration and UI development.</p>
+      </div>
+      <hr>
+      <div class="intern-item">
+        <span class="date">Diploma Final Year</span>
+        <h3>Front-End Intern | Abhivriddhi Edutech</h3>
+        <p>Focused on responsive UI design and user interaction for various mini-projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <div class="edu-item">
+        <span class="date">2024 - 2027 (Expected)</span>
+        <h3>B.Tech in ICT</h3>
+        <p>Marwadi University, Rajkot, Gujarat</p>
+      </div>
+      <div class="edu-item">
+        <span class="date">2021 - 2024</span>
+        <h3>Diploma in Computer Science</h3>
+        <p>Sanjay Gandhi Polytechnic, Bellary, Karnataka</p>
+      </div>
+      <div class="edu-item">
+        <span class="date">2020 - 2021</span>
+        <h3>Secondary Education</h3>
+        <p>Sri Reddy Vemana High School, Bellary, Karnataka</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 B. Rukshith Naidu | Professional Portfolio</p>
+    <p style="font-size: 0.8rem; opacity: 0.7;">Languages: English, Telugu, Kannada, Hindi</p>
+  </footer>
+
+</body>
+</html>
