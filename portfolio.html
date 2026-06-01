@@ -57,10 +57,20 @@
     }
     nav.scrolled { padding: 12px 5%; background: rgba(10,14,26,0.96); }
     .nav-logo {
-      font-size: 1.3rem; font-weight: 700;
-      color: var(--accent); letter-spacing: 1px;
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none;
     }
-    .nav-logo span { color: var(--white); }
+    .nav-logo img {
+      width: 38px; height: 38px; border-radius: 50%;
+      object-fit: cover; border: 2px solid var(--accent);
+      transition: box-shadow .3s;
+    }
+    .nav-logo:hover img { box-shadow: 0 0 14px rgba(100,255,218,0.55); }
+    .nav-logo-name {
+      font-size: 1rem; font-weight: 700; color: var(--white);
+      letter-spacing: .02em;
+    }
+    .nav-logo-name span { color: var(--accent); }
     .nav-links { display: flex; gap: 28px; list-style: none; }
     .nav-links a {
       color: var(--muted); font-size: .88rem; text-transform: uppercase;
@@ -84,7 +94,33 @@
       padding: 100px 5% 60px;
       position: relative; z-index: 2;
     }
-    .hero-inner { max-width: 800px; }
+    /* ── Hero two-col layout ── */
+    .hero-layout {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 60px; width: 100%; max-width: 1000px;
+    }
+    .hero-inner { flex: 1; min-width: 0; }
+    .hero-photo-wrap {
+      flex-shrink: 0;
+      opacity: 0; animation: fadeUp .8s .4s forwards;
+    }
+    .hero-photo {
+      width: 280px; height: 340px;
+      object-fit: cover; object-position: center top;
+      border-radius: 18px;
+      border: 2px solid rgba(100,255,218,0.25);
+      box-shadow: 0 0 40px rgba(100,255,218,0.12), 0 20px 60px rgba(0,0,0,0.5);
+      transition: box-shadow .4s, transform .4s;
+      display: block;
+    }
+    .hero-photo:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 60px rgba(100,255,218,0.22), 0 24px 70px rgba(0,0,0,0.55);
+    }
+    @media (max-width: 800px) {
+      .hero-layout { flex-direction: column-reverse; gap: 36px; }
+      .hero-photo { width: 180px; height: 220px; }
+    }
     .hero-greeting {
       font-size: .95rem; color: var(--accent); letter-spacing: .15em;
       text-transform: uppercase; margin-bottom: 16px;
@@ -98,12 +134,10 @@
     .hero-name span { color: var(--accent); }
     .hero-role {
       font-size: clamp(1.2rem, 3vw, 1.7rem);
-      color: var(--muted); font-weight: 400; margin-bottom: 24px;
-      min-height: 2.1rem;
+      color: var(--accent); font-weight: 500; margin-bottom: 24px;
       opacity: 0; animation: fadeUp .7s .5s forwards;
+      letter-spacing: .02em;
     }
-    .typed-cursor { color: var(--accent); animation: blink 1s infinite; }
-    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
     .hero-summary {
       font-size: 1rem; color: var(--muted); max-width: 620px;
       margin-bottom: 36px; line-height: 1.8;
@@ -404,7 +438,10 @@
 
   <!-- ── Navbar ── -->
   <nav id="navbar">
-    <div class="nav-logo"><span>Rukshith</span>.dev</div>
+    <a href="#hero" class="nav-logo">
+      <img src="profile.jpg" alt="Rukshith">
+      <span class="nav-logo-name">B. <span>Rukshith</span> Naidu</span>
+    </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#hero">Home</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -420,25 +457,31 @@
 
   <!-- ── Hero ── -->
   <section id="hero">
-    <div class="hero-inner">
-      <p class="hero-greeting">👋 Hello, I'm</p>
-      <h1 class="hero-name">B. <span>Rukshith</span> Naidu</h1>
-      <div class="hero-role"><span id="typed-text"></span><span class="typed-cursor">|</span></div>
-      <p class="hero-summary">
-        Motivated Full-Stack Developer pursuing B.Tech in ICT at Marwadi University.
-        Passionate about building scalable, user-friendly web applications using
-        React, Node.js, Spring Boot, and modern cloud tools. I write clean code
-        and solve real-world problems.
-      </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+    <div class="hero-layout">
+      <div class="hero-inner">
+        <p class="hero-greeting">👋 Hello, I'm</p>
+        <h1 class="hero-name">B. <span>Rukshith</span> Naidu</h1>
+        <div class="hero-role">Full-Stack Developer</div>
+        <p class="hero-summary">
+          B.Tech student in ICT at Marwadi University with a strong foundation in
+          full-stack development. I build real-world web applications — from AI-powered
+          eCommerce platforms to secure marketplaces — using React, Node.js, Spring Boot,
+          and modern cloud infrastructure. I care about clean architecture, great UX,
+          and shipping things that actually work.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item"><h3>5+</h3><p>Projects Built</p></div>
+          <div class="stat-item"><h3>2</h3><p>Internships</p></div>
+          <div class="stat-item"><h3>8.12</h3><p>Diploma CGPA</p></div>
+          <div class="stat-item"><h3>4+</h3><p>Languages Known</p></div>
+        </div>
       </div>
-      <div class="hero-stats">
-        <div class="stat-item"><h3>5+</h3><p>Projects Built</p></div>
-        <div class="stat-item"><h3>2</h3><p>Internships</p></div>
-        <div class="stat-item"><h3>8.12</h3><p>Diploma CGPA</p></div>
-        <div class="stat-item"><h3>4+</h3><p>Languages Known</p></div>
+      <div class="hero-photo-wrap">
+        <img src="profile.jpg" alt="B. Rukshith Naidu" class="hero-photo">
       </div>
     </div>
     <div class="scroll-indicator">
@@ -734,22 +777,6 @@
       document.getElementById('navLinks').classList.remove('open');
     }));
 
-    /* ── Typed effect ── */
-    const roles = ['Full-Stack Developer', 'React Developer', 'Node.js Engineer', 'Spring Boot Developer', 'Problem Solver'];
-    let ri = 0, ci = 0, deleting = false;
-    function type() {
-      const el = document.getElementById('typed-text');
-      const current = roles[ri];
-      if (!deleting) {
-        el.textContent = current.slice(0, ++ci);
-        if (ci === current.length) { deleting = true; setTimeout(type, 1600); return; }
-      } else {
-        el.textContent = current.slice(0, --ci);
-        if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; }
-      }
-      setTimeout(type, deleting ? 55 : 95);
-    }
-    type();
 
     /* ── Intersection Observer reveal ── */
     const obs = new IntersectionObserver((entries) => {
