@@ -1,0 +1,74 @@
+name: Deploy Portfolio to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  # ── Validate HTML ──────────────────────────────────────────
+  validate:
+    name: Validate HTML
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate HTML with W3C validator (offline check)
+        run: |
+          if [ ! -f portfolio.html ]; then
+            echo "❌ portfolio.html not found!"
+            exit 1
+          fi
+          echo "✅ portfolio.html found"
+          # Basic sanity checks
+          grep -q "<!DOCTYPE html>" portfolio.html && echo "✅ DOCTYPE present"
+          grep -q "<title>" portfolio.html         && echo "✅ <title> present"
+          grep -q "<meta charset"  portfolio.html  && echo "✅ charset meta present"
+          grep -q "<meta name=\"viewport\"" portfolio.html && echo "✅ viewport meta present"
+          echo "All checks passed."
+
+  # ── Deploy to GitHub Pages ─────────────────────────────────
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: validate
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Rename portfolio.html to index.html (if needed)
+        run: |
+          if [ -f portfolio.html ] && [ ! -f index.html ]; then
+            cp portfolio.html index.html
+            echo "Copied portfolio.html → index.html"
+          fi
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
