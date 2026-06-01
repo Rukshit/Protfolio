@@ -768,7 +768,6 @@
       function frame() {
         ctx.clearRect(0, 0, W, H);
         particles.forEach(p => { p.update(); p.draw(); });
-        // lines
         for (let i = 0; i < particles.length; i++) {
           for (let j = i+1; j < particles.length; j++) {
             const dx = particles[i].x - particles[j].x;
