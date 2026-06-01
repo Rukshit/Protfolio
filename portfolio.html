@@ -57,20 +57,11 @@
     }
     nav.scrolled { padding: 12px 5%; background: rgba(10,14,26,0.96); }
     .nav-logo {
-      display: flex; align-items: center; gap: 10px;
-      text-decoration: none;
+      display: flex; align-items: center;
+      text-decoration: none; font-size: 1.2rem; font-weight: 700;
+      color: var(--white); letter-spacing: .02em;
     }
-    .nav-logo img {
-      width: 38px; height: 38px; border-radius: 50%;
-      object-fit: cover; border: 2px solid var(--accent);
-      transition: box-shadow .3s;
-    }
-    .nav-logo:hover img { box-shadow: 0 0 14px rgba(100,255,218,0.55); }
-    .nav-logo-name {
-      font-size: 1rem; font-weight: 700; color: var(--white);
-      letter-spacing: .02em;
-    }
-    .nav-logo-name span { color: var(--accent); }
+    .nav-logo span { color: var(--accent); }
     .nav-links { display: flex; gap: 28px; list-style: none; }
     .nav-links a {
       color: var(--muted); font-size: .88rem; text-transform: uppercase;
@@ -438,10 +429,7 @@
 
   <!-- ── Navbar ── -->
   <nav id="navbar">
-    <a href="#hero" class="nav-logo">
-      <img src="profile.jpg" alt="Rukshith">
-      <span class="nav-logo-name">B. <span>Rukshith</span> Naidu</span>
-    </a>
+    <a href="#hero" class="nav-logo">B. <span>Rukshith</span> Naidu</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#hero">Home</a></li>
       <li><a href="#skills">Skills</a></li>
