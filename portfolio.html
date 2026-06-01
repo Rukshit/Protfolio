@@ -244,6 +244,26 @@
       font-size: .68rem; padding: 3px 9px; border-radius: 10px;
       border: 1px solid rgba(245,158,11,0.3); font-weight: 600; letter-spacing: .07em;
     }
+    .project-links {
+      display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap;
+    }
+    .project-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 14px; border-radius: 6px; font-size: .78rem; font-weight: 600;
+      text-decoration: none; transition: transform .2s, box-shadow .2s, background .2s;
+      border: 1px solid;
+    }
+    .project-link:hover { transform: translateY(-2px); opacity: 1; }
+    .project-link.github {
+      background: rgba(255,255,255,0.05); color: var(--text);
+      border-color: rgba(255,255,255,0.15);
+    }
+    .project-link.github:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); }
+    .project-link.live {
+      background: rgba(100,255,218,0.1); color: var(--accent);
+      border-color: rgba(100,255,218,0.3);
+    }
+    .project-link.live:hover { background: rgba(100,255,218,0.2); box-shadow: 0 4px 14px rgba(100,255,218,0.2); }
 
     /* ── Education ── */
     .timeline { position: relative; padding-left: 28px; }
@@ -501,6 +521,9 @@
             <span class="tech-pill">MySQL</span>
             <span class="tech-pill">Docker</span>
           </div>
+          <div class="project-links">
+            <a href="https://openmarket-production-c71d.up.railway.app/" target="_blank" class="project-link live">🚀 Live Demo</a>
+          </div>
         </div>
 
         <div class="project-card reveal" style="transition-delay:.1s">
@@ -516,6 +539,9 @@
             <span class="tech-pill">Supabase</span>
             <span class="tech-pill">Razorpay</span>
           </div>
+          <div class="project-links">
+            <a href="https://shafi16-shopnow.hf.space/" target="_blank" class="project-link live">🚀 Live Demo</a>
+          </div>
         </div>
 
         <div class="project-card reveal" style="transition-delay:.2s">
@@ -530,6 +556,9 @@
             <span class="tech-pill">Thymeleaf</span>
             <span class="tech-pill">Bootstrap</span>
           </div>
+          <div class="project-links">
+            <a href="https://github.com/Rukshit/AgroDirect" target="_blank" class="project-link github">⌥ GitHub</a>
+          </div>
         </div>
 
         <div class="project-card reveal" style="transition-delay:.3s">
@@ -543,6 +572,9 @@
             <span class="tech-pill">HTML/CSS</span>
             <span class="tech-pill">SQL</span>
             <span class="tech-pill">XAMPP</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Rukshit/Travel-management-system" target="_blank" class="project-link github">⌥ GitHub</a>
           </div>
         </div>
 
