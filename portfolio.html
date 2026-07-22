@@ -272,6 +272,16 @@
       transition: transform .2s, box-shadow .2s, background .2s;
       cursor: pointer;
       border: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn svg {
+      width: 18px;
+      height: 18px;
+      stroke-width: 2px;
     }
 
     .btn:hover {
@@ -617,6 +627,19 @@
     .cert-icon {
       font-size: 1.8rem;
       margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      background: var(--accent-soft);
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+    }
+
+    .cert-icon svg {
+      width: 24px;
+      height: 24px;
     }
 
     .cert-card h3 {
@@ -868,6 +891,21 @@
 
     .contact-icon {
       font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      background: var(--accent-soft);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .contact-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke-width: 2px;
     }
 
     .contact-label {
@@ -1221,10 +1259,8 @@
             <span class="tech-pill">Docker</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/shaikshafi67/OpenMarket.git" target="_blank" class="project-link github">⌥
-              GitHub</a>
-            <a href="https://openmarket-production-c71d.up.railway.app/" target="_blank" class="project-link live">🚀
-              Live Demo</a>
+            <a href="https://github.com/shaikshafi67/OpenMarket.git" target="_blank" class="project-link github"><i data-lucide="github"></i> GitHub</a>
+            <a href="https://openmarket-production-c71d.up.railway.app/" target="_blank" class="project-link live"><i data-lucide="external-link"></i> Live Demo</a>
           </div>
         </div>
 
@@ -1243,9 +1279,8 @@
             <span class="tech-pill">Razorpay</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/shaikshafi67/ShopNow.git" target="_blank" class="project-link github">⌥
-              GitHub</a>
-            <a href="https://shopnow.shafisolution.com" target="_blank" class="project-link live">🚀 Live Demo</a>
+            <a href="https://github.com/shaikshafi67/ShopNow.git" target="_blank" class="project-link github"><i data-lucide="github"></i> GitHub</a>
+            <a href="https://shopnow.shafisolution.com" target="_blank" class="project-link live"><i data-lucide="external-link"></i> Live Demo</a>
           </div>
         </div>
 
@@ -1263,7 +1298,7 @@
             <span class="tech-pill">Bootstrap</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/Rukshit/AgroDirect" target="_blank" class="project-link github">⌥ GitHub</a>
+            <a href="https://github.com/Rukshit/AgroDirect" target="_blank" class="project-link github"><i data-lucide="github"></i> GitHub</a>
           </div>
         </div>
 
@@ -1281,8 +1316,7 @@
             <span class="tech-pill">XAMPP</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/Rukshit/Travel-management-system" target="_blank" class="project-link github">⌥
-              GitHub</a>
+            <a href="https://github.com/Rukshit/Travel-management-system" target="_blank" class="project-link github"><i data-lucide="github"></i> GitHub</a>
           </div>
         </div>
 
@@ -1300,8 +1334,7 @@
             <span class="tech-pill">XAMPP</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/Rukshit/Online-Voting-System.git" target="_blank" class="project-link github">⌥
-              GitHub</a>
+            <a href="https://github.com/Rukshit/Online-Voting-System.git" target="_blank" class="project-link github"><i data-lucide="github"></i> GitHub</a>
           </div>
         </div>
 
@@ -1318,74 +1351,74 @@
       <div class="cert-grid">
 
         <div class="cert-card reveal">
-          <div class="cert-icon">📜</div>
+          <div class="cert-icon"><i data-lucide="award"></i></div>
           <h3>Advanced Java – Learn by Hands-on</h3>
           <p class="cert-issuer">Udemy</p>
           <div class="project-links">
             <a href="https://drive.google.com/file/d/1mX_aZ_slyIOhEgdB22HJQPxb_CxRGbWz/view" target="_blank"
-              class="project-link github">👁 View</a>
+              class="project-link github"><i data-lucide="eye"></i> View</a>
             <a href="https://drive.google.com/uc?export=download&id=1mX_aZ_slyIOhEgdB22HJQPxb_CxRGbWz" target="_blank"
-              class="project-link live">⬇ Download</a>
+              class="project-link live"><i data-lucide="download"></i> Download</a>
           </div>
         </div>
 
         <div class="cert-card reveal" style="transition-delay:.1s">
-          <div class="cert-icon">📜</div>
+          <div class="cert-icon"><i data-lucide="award"></i></div>
           <h3>Database Programming with SQL</h3>
           <p class="cert-issuer">Oracle Academy</p>
           <div class="project-links">
             <a href="https://drive.google.com/file/d/1WXbgGVe05eQei6dhBELt-w5J0pwcmZlo/view" target="_blank"
-              class="project-link github">👁 View</a>
+              class="project-link github"><i data-lucide="eye"></i> View</a>
             <a href="https://drive.google.com/uc?export=download&id=1WXbgGVe05eQei6dhBELt-w5J0pwcmZlo" target="_blank"
-              class="project-link live">⬇ Download</a>
+              class="project-link live"><i data-lucide="download"></i> Download</a>
           </div>
         </div>
 
         <div class="cert-card reveal" style="transition-delay:.2s">
-          <div class="cert-icon">📜</div>
+          <div class="cert-icon"><i data-lucide="award"></i></div>
           <h3>Full Stack Development with MEAN</h3>
           <p class="cert-issuer">thingQbator × Nasscom Foundation</p>
           <div class="project-links">
             <a href="https://drive.google.com/file/d/1vM1-mrOkWk0qiQtbbuCOT6OXwYAmH604/view" target="_blank"
-              class="project-link github">👁 View</a>
+              class="project-link github"><i data-lucide="eye"></i> View</a>
             <a href="https://drive.google.com/uc?export=download&id=1vM1-mrOkWk0qiQtbbuCOT6OXwYAmH604" target="_blank"
-              class="project-link live">⬇ Download</a>
+              class="project-link live"><i data-lucide="download"></i> Download</a>
           </div>
         </div>
 
         <div class="cert-card reveal" style="transition-delay:.3s">
-          <div class="cert-icon">📜</div>
+          <div class="cert-icon"><i data-lucide="award"></i></div>
           <h3>Full Stack Development with MERN</h3>
           <p class="cert-issuer">thingQbator × Nasscom Foundation</p>
           <div class="project-links">
             <a href="https://drive.google.com/file/d/1NjfSBCgOdmEyVIso0kO-RsCeHvfKFORJ/view" target="_blank"
-              class="project-link github">👁 View</a>
+              class="project-link github"><i data-lucide="eye"></i> View</a>
             <a href="https://drive.google.com/uc?export=download&id=1NjfSBCgOdmEyVIso0kO-RsCeHvfKFORJ" target="_blank"
-              class="project-link live">⬇ Download</a>
+              class="project-link live"><i data-lucide="download"></i> Download</a>
           </div>
         </div>
 
         <div class="cert-card reveal" style="transition-delay:.4s">
-          <div class="cert-icon">📜</div>
+          <div class="cert-icon"><i data-lucide="award"></i></div>
           <h3>React and Node.js Full Stack Development</h3>
           <p class="cert-issuer">Udemy</p>
           <div class="project-links">
             <a href="https://drive.google.com/file/d/1JSdIFXvE5yslNVRenYZuqTDLhu4nJZmG/view" target="_blank"
-              class="project-link github">👁 View</a>
+              class="project-link github"><i data-lucide="eye"></i> View</a>
             <a href="https://drive.google.com/uc?export=download&id=1JSdIFXvE5yslNVRenYZuqTDLhu4nJZmG" target="_blank"
-              class="project-link live">⬇ Download</a>
+              class="project-link live"><i data-lucide="download"></i> Download</a>
           </div>
         </div>
 
         <div class="cert-card reveal" style="transition-delay:.5s">
-          <div class="cert-icon">📜</div>
+          <div class="cert-icon"><i data-lucide="award"></i></div>
           <h3>Web Development: Zero to Hero</h3>
           <p class="cert-issuer">Udemy</p>
           <div class="project-links">
             <a href="https://drive.google.com/file/d/1J3zB6rzSPBNejUekrdjQS_K8bWKXNkew/view" target="_blank"
-              class="project-link github">👁 View</a>
+              class="project-link github"><i data-lucide="eye"></i> View</a>
             <a href="https://drive.google.com/uc?export=download&id=1J3zB6rzSPBNejUekrdjQS_K8bWKXNkew" target="_blank"
-              class="project-link live">⬇ Download</a>
+              class="project-link live"><i data-lucide="download"></i> Download</a>
           </div>
         </div>
 
@@ -1466,10 +1499,10 @@
       <h2 class="section-title reveal">Languages</h2>
       <div class="section-divider reveal"></div>
       <div class="lang-row reveal">
-        <span class="lang-pill">🇬🇧 English</span>
-        <span class="lang-pill">🇮🇳 Telugu</span>
-        <span class="lang-pill">🇮🇳 Kannada</span>
-        <span class="lang-pill">🇮🇳 Hindi</span>
+        <span class="lang-pill">English</span>
+        <span class="lang-pill">Telugu</span>
+        <span class="lang-pill">Kannada</span>
+        <span class="lang-pill">Hindi</span>
       </div>
     </div>
   </section>
@@ -1485,9 +1518,9 @@
       </p>
       <div class="resume-cta reveal">
         <a href="https://drive.google.com/file/d/1EKqlS6_0OQheVRjcCWBTfAkYfdGQjOzx/view" target="_blank"
-          class="btn btn-outline">👁 View Resume</a>
+          class="btn btn-outline"><i data-lucide="eye"></i> View Resume</a>
         <a href="https://drive.google.com/uc?export=download&id=1EKqlS6_0OQheVRjcCWBTfAkYfdGQjOzx"
-          class="btn btn-primary">⬇ Download Resume</a>
+          class="btn btn-primary"><i data-lucide="download"></i> Download Resume</a>
       </div>
     </div>
   </section>
@@ -1500,14 +1533,14 @@
       <div class="section-divider reveal"></div>
       <div class="contact-grid">
         <a href="mailto:brukshithnaidu@gmail.com" class="contact-card reveal">
-          <div class="contact-icon">📧</div>
+          <div class="contact-icon"><i data-lucide="mail"></i></div>
           <div>
             <div class="contact-label">Email</div>
             <div class="contact-value">brukshithnaidu@gmail.com</div>
           </div>
         </a>
         <a href="tel:+917019339872" class="contact-card reveal" style="transition-delay:.1s">
-          <div class="contact-icon">📱</div>
+          <div class="contact-icon"><i data-lucide="phone"></i></div>
           <div>
             <div class="contact-label">Phone</div>
             <div class="contact-value">+91 7019339872</div>
@@ -1515,14 +1548,14 @@
         </a>
         <a href="https://www.linkedin.com/in/b-rukshith-naidu-b3855228b" target="_blank" class="contact-card reveal"
           style="transition-delay:.2s">
-          <div class="contact-icon">💼</div>
+          <div class="contact-icon"><i data-lucide="linkedin"></i></div>
           <div>
             <div class="contact-label">LinkedIn</div>
             <div class="contact-value">b-rukshith-naidu-b3855228b</div>
           </div>
         </a>
         <a href="https://github.com/Rukshit" target="_blank" class="contact-card reveal" style="transition-delay:.3s">
-          <div class="contact-icon">🐙</div>
+          <div class="contact-icon"><i data-lucide="github"></i></div>
           <div>
             <div class="contact-label">GitHub</div>
             <div class="contact-value">github.com/Rukshit</div>
@@ -1544,7 +1577,7 @@
           <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
           <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
-        <p class="form-note">📩 Messages are sent directly to brukshithnaidu@gmail.com via FormSubmit.</p>
+        <p class="form-note"><i data-lucide="send" style="width:14px;height:14px;margin-right:4px;vertical-align:middle;display:inline-block;"></i> Messages are sent directly to brukshithnaidu@gmail.com via FormSubmit.</p>
       </div>
     </div>
   </section>
@@ -1555,7 +1588,10 @@
     <p style="margin-top:6px;font-size:.78rem;opacity:.75">© 2026 · Deployed via GitHub Actions → GitHub Pages</p>
   </footer>
 
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
+    lucide.createIcons();
+
     /* ── Navbar scroll shrink ── */
     window.addEventListener('scroll', () => {
       document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
